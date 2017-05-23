@@ -56,7 +56,12 @@ $("input[type='text']").keypress(function(event){
         $(this).val("");
         // once we get the value we need to add that to the ul 
         // we have an append() to add
-        $("ul").append("<li><span>X </span>"+ todoList + "</li>");
+        $("ul").append("<li><span><i class='fa fa-trash'></i></span> "+ todoList + "</li>");
         
     }
+});
+
+// selecting the class
+$(".fa-pencil").click(function(){
+   $("input[type='text']").fadeToggle(); 
 });
