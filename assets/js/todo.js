@@ -23,3 +23,15 @@
 $("li").click(function(){
     $(this).toggleClass("completed");
 });
+
+
+// now deleting the todos
+$("span").click(function(event){
+    // instead of the fadeout we can also delete the todos directly
+    // $(this).parent().remove();
+    
+    $(this).parent().fadeOut(500,function(){
+        $(this).remove();
+    });
+    event.stopPropagation();
+});
